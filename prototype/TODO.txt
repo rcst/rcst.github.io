@@ -1,2 +1,3 @@
 - when scaling up/ zooming in, the Navigation bar starts to overlap with the logo
+- add line-wrapping in dropdown menue when it's a sidebar
 - put icons next to the paragraphs in the feature list
