@@ -1437,6 +1437,7 @@ input, select, textarea {
 
 		}
 
+
 /* Section/Article */
 
 	section,
@@ -1919,6 +1920,50 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+	div.icon-centered {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	i.icon-centered { 
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		display: block;
+		font-style: normal;
+		font-variant: normal;
+		text-rendering: auto;
+		text-transform: none !important;
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 400;
+
+		color: #fff;
+		background: #2f333b url("images/overlay.png"); 
+		border-radius: 2.5em;
+		margin-right: 0.75em;
+		text-align: center;
+		width: 2.50em;
+		height: 2.50em;
+		line-height: 2.5em;
+		/* left: 0; */
+		/* margin-top: auto; */
+		float: left;
+		font-size: 1.50em;
+	}
+
+		i.icon-centered > .label {
+			display: none;
+		}
+
+		i.icon-centered.solid:before {
+			font-weight: 900;
+		}
+
+
+	p.icon-text {
+		display: table-cell;
+		vertical-align: top;
+	}
+
 /* Box */
 
 	.box header {
@@ -2093,7 +2138,7 @@ input, select, textarea {
 		}
 
 		.homepage #header {
-			height: 35em;
+			height: 25em;
 		}
 
 /* Logo */
@@ -2271,6 +2316,11 @@ input, select, textarea {
 			padding: 1em 0 1em 0;
 			margin-bottom: 1em;
 		}
+
+		#intro div.feature-list {
+			text-align: left;
+		}
+
 /* Features */
 
 	#features header.style1 {

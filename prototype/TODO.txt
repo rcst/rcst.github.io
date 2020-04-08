@@ -1,0 +1,2 @@
+- when scaling up/ zooming in, the Navigation bar starts to overlap with the logo
+- put icons next to the paragraphs in the feature list
