@@ -1922,7 +1922,7 @@ input, select, textarea {
 
 	div.icon-centered {
 		display: table-cell;
-		vertical-align: middle;
+		vertical-align: top;
 	}
 
 	i.icon-centered { 
@@ -2212,6 +2212,7 @@ input, select, textarea {
 					-ms-transition: all .25s ease-in-out;
 					transition: all .25s ease-in-out;
 					outline: 0;
+					text-overflow: hide;
 				}
 
 				#nav > ul > li:hover > a {
@@ -2228,7 +2229,7 @@ input, select, textarea {
 		padding: 1.25em 1em 1.25em 1em;
 		border-radius: 0.35em;
 		box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
-		min-width: 12em;
+		min-width: 22em;
 		text-align: left;
 		margin-top: -1.25em;
 		margin-left: -1px;
