@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Entwicklung und Evaluation eines Emotionswissenstrainings für Kindergartenfachkräfte Datenimputation | _main.utf8</title>
+  <meta name="description" content="Entwicklung und Evaluation eines Emotionswissenstrainings für Kindergartenfachkräfte<br />
+Datenimputation</div>" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Entwicklung und Evaluation eines Emotionswissenstrainings für Kindergartenfachkräfte Datenimputation | _main.utf8" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Entwicklung und Evaluation eines Emotionswissenstrainings für Kindergartenfachkräfte Datenimputation | _main.utf8" />
+  
+  
+  
+
+<meta name="author" content="Eric Stemmler" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="literatur.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Vorüberlegungen zur Datenimputation</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#validität-einer-imputation"><i class="fa fa-check"></i><b>1.1</b> Validität einer Imputation</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#missing-completely-at-random"><i class="fa fa-check"></i><b>1.1.1</b> Missing completely at random</a></li>
+<li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#missing-at-random"><i class="fa fa-check"></i><b>1.1.2</b> Missing at random</a></li>
+<li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#missing-not-at-random-zensur"><i class="fa fa-check"></i><b>1.1.3</b> Missing not at random/ Zensur</a></li>
+<li class="chapter" data-level="1.1.4" data-path="index.html"><a href="index.html#fazit"><i class="fa fa-check"></i><b>1.1.4</b> Fazit</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#betrachtung-des-vorliegenden-datensatzes"><i class="fa fa-check"></i><b>1.2</b> Betrachtung des vorliegenden Datensatzes</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="literatur.html"><a href="literatur.html"><i class="fa fa-check"></i><b>2</b> Literatur</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><div class="line-block">Entwicklung und Evaluation eines Emotionswissenstrainings für Kindergartenfachkräfte<br />
+Datenimputation</div></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title"><div class="line-block">Entwicklung und Evaluation eines Emotionswissenstrainings für Kindergartenfachkräfte<br />
+Datenimputation</div></h1>
+<p class="author"><em>Eric Stemmler</em></p>
+<p class="date"><em>23.04.2020</em></p>
+</div>
+<div id="vorüberlegungen-zur-datenimputation" class="section level1">
+<h1><span class="header-section-number">1</span> Vorüberlegungen zur Datenimputation</h1>
+<p>Eine Imputation ermöglichst die Auswertung aller <em>vorhandenen</em> Daten in einem Datensatz. Im Normalfall ist es so, dass Software zur statistischen Analyse von Daten den gesamten einzelnen Dateneintrag (d.h. z.B. die Daten ID, Kontrollgruppe/ Experimentalgruppe, Alter, abhängige Variable) verwirft oder igrnoriert, wenn einer der Werte fehlt (z.B. Alter). Eine Imputation des Datenwertes für die Variable Alter würde hierbei entsprechend helfen, die <em>vorhandenen</em> Informationen, d.h. Kontroll/ Experimentalgruppe und abhängigen Variable für das statistische Verfahren zu erhalten.</p>
+<p>Es gibt im Prinzip zwei Aspekte, die über die Sinnhaftigkeit einer Datenimputation entscheiden. (1) Ist die Imputation für sich genommen überhaupt valide? und (2) Lassen sich durch Auswertung des imputierten Datensatzes statistisch fundierte Schlussfolgerungen ziehen?</p>
+<div id="validität-einer-imputation" class="section level2">
+<h2><span class="header-section-number">1.1</span> Validität einer Imputation</h2>
+<p>Es gibt verschienen Verfahren Daten zu imputieren. Wie man imputatiert hängt von den Antworten auf folgende Fragen ab: (a) Warum treten die Lücken im Datensatz auf? (b) Wie treten die Lücken auf? (c) Wo treten die Lücken auf?</p>
+<p>Man unterscheidet, ob Lücken in einer (univariat) oder mehrerer (multivariat) Variablen auftauchen.</p>
+<div id="missing-completely-at-random" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Missing completely at random</h3>
+<p>Treten die Lücken rein zufällig auf (<em>missing completely at random</em>), dann wäre das gleichbedeutend damit, dass die Teilnehmer jedesmal um die Beantwortung einer Frage gewürfelt hätten.</p>
+</div>
+<div id="missing-at-random" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Missing at random</h3>
+<p>Treten die Lücken nicht rein zufällig auf, so wie es meistens der Fall ist, spricht man von zufälligen Lücken (<em>missingness at random</em>). Dieser Fall lässt sich erkennen, wenn die Auslassungsraten über andere Variablen hinweg unterschiedlich groß sind. Beispiel: Unterschiedlich viele Angaben bei der Frage nach dem Einkommen für ehemalige West- und Ostdeutsche. Eine Implikation dieser Annahme ist, dass die Wahrscheinlich für das Fehlen eines Wertes alleinig von vorhandenen Daten abhängt <span class="citation">(Gelman and Hill 2006)</span>. Bei ausreichend vorhandenen Daten bedeutet das, dass man die fehlenden Dateneinträge ignorieren kann, solange man die entsprechend konfundierden Variablen in das statistische Modell mit einschließt. Das würde die Verzerrung aufgrund der fehlenden Werte reduzieren. Falls nicht genügend viele Daten vorhandenen sind um noch eine sinnvolle Auswertung durchzuführen ist eine Imputation zu empfehlen.</p>
+</div>
+<div id="missing-not-at-random-zensur" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> Missing not at random/ Zensur</h3>
+<p>Demgegenüber gibt es den Fall, dass die Wahrscheinlichkeit einer Lücke von nicht vorhandenen Daten abhängt. Man hat dann die Möglichkeit das Fehlen explizit zu modellieren oder es bleibt nichts anderes übrig, als eine Verzerrung in Kauf zu nehmen. Ein Spezialfall von letzteren ist, wenn die Wahrscheinlichkeit des Fehlens von der betroffenen Variable selbstabhängt, d.h. Zensur.</p>
+</div>
+<div id="fazit" class="section level3">
+<h3><span class="header-section-number">1.1.4</span> Fazit</h3>
+<p>Die Fälle <em>missing completly at random</em> (MCAR) und <em>missing at random</em> (MAR) sind jene, bei denen eine valide Imputation, d.h. keine Verzerrung wahrscheinlicher und vor allem leichter zu erreichen ist. Die Güte der Imputation hängt dann nur vom Imputationsmodell ab. Handelt es sich um <em>missing not at random</em> (MNAR) ist dies schwieriger, jedoch verringert eine Imputation sicher die Verzerrung die man sich durch schlichtes irgnorieren der Datenlücken zulassen würde.</p>
+<p>Im Allgemeinen ist es leider unmöglich zu beweisen/ zweifelsfrei zu zeigen, dass MAR vorliegt <span class="citation">(Gelman and Hill 2006)</span>.</p>
+</div>
+</div>
+<div id="betrachtung-des-vorliegenden-datensatzes" class="section level2">
+<h2><span class="header-section-number">1.2</span> Betrachtung des vorliegenden Datensatzes</h2>
+
+<div class="figure"><span id="fig:mdPattern"></span>
+<img src="index_files/figure-html/mdPattern-1.png" alt="Lückenmuster (rot = fehlt, blau = vorhanden) der demographischen Daten (v.l.n.r.): Anzahl der Berufsjahre (kategorial), Anzahl Berufsjahre als Kitafachkraft, Alter, Alter (kategorial), Erfahrung EmotionTalk, Schulabschluss zusammengefasst (kategorial: 0, 1), Schulabschluss zusammengefasst, Schulabschluss, Schulab (sonstige), hoechste Ausbildung (zusammengefasst), Ausbildung, Ausbildung (sonstige). Die Zahlen am linken Rand geben an wieviele Zeilen im Datensatz mit einem Lückenmuster vorkommen. Die Zahlen am rechten Rand geben an, wieviele Variablen in dieser Konstellation Lücken haben. Die Zahlen am unteren Rand geben an, wieiviele Werte in der Variable fehlen." width="672" />
+<p class="caption">
+Abbildung 1.1: Lückenmuster (rot = fehlt, blau = vorhanden) der demographischen Daten (v.l.n.r.): Anzahl der Berufsjahre (kategorial), Anzahl Berufsjahre als Kitafachkraft, Alter, Alter (kategorial), Erfahrung EmotionTalk, Schulabschluss zusammengefasst (kategorial: 0, 1), Schulabschluss zusammengefasst, Schulabschluss, Schulab (sonstige), hoechste Ausbildung (zusammengefasst), Ausbildung, Ausbildung (sonstige). Die Zahlen am linken Rand geben an wieviele Zeilen im Datensatz mit einem Lückenmuster vorkommen. Die Zahlen am rechten Rand geben an, wieviele Variablen in dieser Konstellation Lücken haben. Die Zahlen am unteren Rand geben an, wieiviele Werte in der Variable fehlen.
+</p>
+</div>
+<p>Abbildung <a href="index.html#fig:mdPattern">1.1</a> zeigt das Lückenmuster im vorliegenden Datensatz. Die Variablen <em>htrain</em> und <em>train</em>, sowie <em>educ01</em>, <em>educ</em> und <em>edu</em> fehlen demnach immer im Verbund. Diese Variablen lassen sich einfach imputieren, wenn jeweils die Variablen <em>train</em> und <em>edu</em> imputiert wurde.</p>
+
+<div class="figure"><span id="fig:margin"></span>
+<img src="index_files/figure-html/margin-1.png" alt="Die roten Punkte und Balken sind jene Alters-Werte, für die der entsprechende Erfahrungs-Wert fehlt. Die blauen Werte repräsentieren vorhandene Datenwerte." width="672" />
+<p class="caption">
+Abbildung 1.2: Die roten Punkte und Balken sind jene Alters-Werte, für die der entsprechende Erfahrungs-Wert fehlt. Die blauen Werte repräsentieren vorhandene Datenwerte.
+</p>
+</div>
+<p>In Abbildung <a href="index.html#fig:margin">1.2</a> ist ein sogenannter <em>margin plot</em> dargestellt. Der Plot zeigt boxplots (d.h. Mittelwert, 1. und 2. Quartil und doppelte Standardabweichung) an den Rändern unten und links (engl. <em>margins</em>) für jeweils zwei Variablen. In diesem Fall sind es Alter (<em>age</em>) und Vorerfahrung mit EmotionTalk (<em>emo</em>). Der rote Boxplot zeigt alle Alterswerte für welche der entsprechende Wert für Vorerfahrung mit EmotionTalk fehlt der untere blaue für alle bei denen er vorhanden ist. Da sich roter und blauer Boxplot voneinander unterscheiden, kann man davon ausgehen, dass <em>emo</em> nicht rein zufällig fehlt (MAR). Zum Großteil überlappen sich die beiden Boxplots, was dafür spricht, dass die Varianz der Variable <em>age</em> für entsprechend fehlende Einträge bei <em>emo</em> innerhalb der Varianz der vollständigen Einträge liegt und deshalb eine Imputation auf Basis des Alters zu einer Reduktion der ansonsten vorliegenden Verzerrung führen kann.</p>
+<p>Um zu statitisch fundiert zu ermitteln, welche Variablen einen Einfluss auf das fehlen von Werten in einer anderer Variablen haben, kann man das fehlen durch eine logistische Regression modellieren. Hierfür lässt sich jeweils eine neue binomiale Variable definieren mit welche die Werte 1 (vorhanden) oder 0 (fehlt) annehmen kann.</p>
+
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:logisticRegression">Tabelle 1.1: </span>Lücken-Modellierung: Ergebnisse der logistische Regression für alle Variablen mit fehlenden Werten. Gezeigt sind p-Werte &lt; .8
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+predictor
+</th>
+<th style="text-align:right;">
+Std. Error
+</th>
+<th style="text-align:right;">
+p
+</th>
+<th style="text-align:left;">
+dependent variable
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+year3-5 Jahre
+</td>
+<td style="text-align:right;">
+2.2320109
+</td>
+<td style="text-align:right;">
+0.7924073
+</td>
+<td style="text-align:left;vertical-align: middle !important;" rowspan="2">
+train
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+age
+</td>
+<td style="text-align:right;">
+0.3632144
+</td>
+<td style="text-align:right;">
+0.5947806
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+fexpweniger als 11 Jahre
+</td>
+<td style="text-align:right;">
+5.0990754
+</td>
+<td style="text-align:right;">
+0.1198445
+</td>
+<td style="text-align:left;vertical-align: middle !important;" rowspan="5">
+emo
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+age
+</td>
+<td style="text-align:right;">
+0.2154595
+</td>
+<td style="text-align:right;">
+0.0697236
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+year11-20 Jahre
+</td>
+<td style="text-align:right;">
+2.5929530
+</td>
+<td style="text-align:right;">
+0.2201406
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+year3-5 Jahre
+</td>
+<td style="text-align:right;">
+2.0198049
+</td>
+<td style="text-align:right;">
+0.5356446
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+trainDipl. Sozialpädagogin oder B.A. Sozialpädagogin
+</td>
+<td style="text-align:right;">
+2.5987167
+</td>
+<td style="text-align:right;">
+0.5256632
+</td>
+</tr>
+</tbody>
+</table>
+<p>In Tabelle <a href="index.html#tab:logisticRegression">1.1</a> sind die Ergebnisse der logistischen Regressionen für die Variablen mit fehlenden Werten gezeigt. Der Übersichtlichkeit halber sind hier nur jene Prädiktoren aufgelistet, für welche der entsprechende p-Wert <span class="math inline">\(&lt; .8\)</span> ergeben hat. Variablen die sich signifikant oder mit geringerem p-Wert modellieren lassen, ist die zusätzliche Streuung im imputierten Datensatz, welche durch die Imputation zwangsläufig hinzukommt geringer als für jene mit größerem p-Wert. Grundsätzlich ist es jedoch legitim, für die Modellierung von Lücken alle möglichen Prädiktoren zu verwenden, solange das Ergebnis plausible ist <span class="citation">(Gelman and Hill 2006)</span>.</p>
+<p>Ein weitere Analyse um zu überprüfen, ob die Imputation valide ist, ist im Falle von FCS (implementiert im R-Packet MICE) zu überprüfen ob über die Iterationen hinweg Imputation konvergieren. Konvergenz von Imputation ist ein Indikator für ungültige Imputationen <span class="citation">(Buuren and Groothuis-Oudshoorn 2010)</span>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="literatur.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
