@@ -1,3 +1,5 @@
 - when scaling up/ zooming in, the Navigation bar starts to overlap with the logo
-- add line-wrapping in dropdown menue when it's a sidebar
-- put icons next to the paragraphs in the feature list
+- add line-wrapping in dropdown menue when it's a sidebar, alternativ kürzere Menüeinträge wählen (z.B. "Gesellenausbildung statt "Gesellenausbildung zur Massschneider*in mit Schwerpunkt Damen oder Herrenschneider")
+- put icons next to the paragraphs in the feature list (s. Telegram-Nachricht) 
+- fix different scaling behaviours: background image (dress) scales but logo doesn't, but it should.
+- Entwurf Photo-Seite
