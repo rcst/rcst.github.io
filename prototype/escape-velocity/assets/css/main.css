@@ -1886,6 +1886,10 @@ input, select, textarea {
 			font-size: 0.8em;
 		}
 
+		.feature-list.small h3 {
+			padding-left: 0%;
+		}
+
 /* Icons */
 
 	.icon {

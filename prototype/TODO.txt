@@ -3,3 +3,4 @@
 - put icons next to the paragraphs in the feature list (s. Telegram-Nachricht) 
 - fix different scaling behaviours: background image (dress) scales but logo doesn't, but it should.
 - Entwurf Photo-Seite
+- Informationselemente im footer über die gesamte Breite verteilen
