@@ -1961,7 +1961,7 @@ input, select, textarea {
 		float: left;
 		font-size: 1.50em;
 		position: absolute;
-		top: 45%;
+		/* top: 45%; */
 	}
 
 		i.icon-centered > .label {
